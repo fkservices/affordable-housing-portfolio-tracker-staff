@@ -172,19 +172,20 @@ export default function DashboardPage() {
       <Grid container spacing={3} sx={{ mb: 3 }}>
         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <KpiCard
+            title="Active Affordable Units"
+            value={activeAffordableUnits}
+            subtitle="Units under active affordability agreements"
+            color="#22c55e"
+            onClick={() => router.push('/properties?sort=affordableUnits&order=desc')}
+          />
+        </Grid>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <KpiCard
             title="Total Properties"
             value={totalProperties}
             subtitle="All AHPG properties in the portfolio"
             color="#15457B"
             onClick={() => router.push('/properties')}
-          />
-        </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-          <KpiCard
-            title="Active Affordable Units"
-            value={activeAffordableUnits}
-            subtitle="Units under active affordability agreements"
-            color="#22c55e"
           />
         </Grid>
         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
