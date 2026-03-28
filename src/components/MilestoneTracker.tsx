@@ -27,9 +27,9 @@ const STEPS: MilestoneStep[] = [
 ];
 
 function getStepColor(dateStr?: string): string {
-  if (!dateStr) return '#9ca3af'; // grey
+  if (!dateStr) return '#8D8D8D'; // grey
   const date = new Date(dateStr);
-  return date <= new Date() ? '#22c55e' : '#f59e0b'; // green if past, amber if future
+  return date <= new Date() ? '#22c55e' : '#F5821E'; // green if past, amber if future
 }
 
 function CustomStepIcon(props: StepIconProps & { stepColor: string }) {

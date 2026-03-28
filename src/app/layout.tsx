@@ -45,7 +45,7 @@ export default function RootLayout({
                 flexGrow: 1,
                 ml: 0,
                 minHeight: '100vh',
-                backgroundColor: '#f8fafc',
+                backgroundColor: '#EFF2F0',
               }}
             >
               <ProvenanceBanner show={showProvenance} />

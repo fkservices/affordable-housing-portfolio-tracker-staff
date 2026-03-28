@@ -131,7 +131,7 @@ export default function AlertsPage() {
             sx={{
               mb: 2,
               opacity: isAcknowledged ? 0.7 : 1,
-              borderLeft: `4px solid ${alert.severity === 'red' ? '#ef4444' : '#f59e0b'}`,
+              borderLeft: `4px solid ${alert.severity === 'red' ? '#AA222A' : '#F5821E'}`,
             }}
           >
             <CardContent>

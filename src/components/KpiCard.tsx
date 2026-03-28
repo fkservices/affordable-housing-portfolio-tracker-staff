@@ -19,8 +19,8 @@ interface KpiCardProps {
 
 const trendIcon: Record<string, React.ReactNode> = {
   up: <TrendingUpIcon sx={{ color: '#22c55e' }} />,
-  down: <TrendingDownIcon sx={{ color: '#ef4444' }} />,
-  neutral: <TrendingFlatIcon sx={{ color: '#9ca3af' }} />,
+  down: <TrendingDownIcon sx={{ color: '#AA222A' }} />,
+  neutral: <TrendingFlatIcon sx={{ color: '#8D8D8D' }} />,
 };
 
 export default function KpiCard({ title, value, subtitle, trend, color, onClick }: KpiCardProps) {

@@ -29,10 +29,10 @@ import alertsData from '@/data/alerts.json';
 
 const STATUS_COLORS: Record<PropertyStatus, string> = {
   active: '#22c55e',
-  'expiring-soon': '#f59e0b',
-  'under-review': '#f59e0b',
-  'non-compliant': '#ef4444',
-  expired: '#9ca3af',
+  'expiring-soon': '#F5821E',
+  'under-review': '#F5821E',
+  'non-compliant': '#AA222A',
+  expired: '#8D8D8D',
 };
 
 export default function DashboardPage() {
@@ -139,9 +139,9 @@ export default function DashboardPage() {
   };
 
   const getDeadlineColor = (days: number): string => {
-    if (days < 0) return '#ef4444';
-    if (days <= 365) return '#ef4444';
-    if (days <= 1095) return '#f59e0b';
+    if (days < 0) return '#AA222A';
+    if (days <= 365) return '#AA222A';
+    if (days <= 1095) return '#F5821E';
     return '#22c55e';
   };
 
@@ -175,7 +175,7 @@ export default function DashboardPage() {
             title="Total Properties"
             value={totalProperties}
             subtitle="All AHPG properties in the portfolio"
-            color="#1e40af"
+            color="#15457B"
             onClick={() => router.push('/properties')}
           />
         </Grid>
@@ -192,7 +192,7 @@ export default function DashboardPage() {
             title="Portfolio Compliance Rate"
             value={complianceRate}
             subtitle="Properties meeting all compliance requirements"
-            color="#7c3aed"
+            color="#4B3F72"
             onClick={() => router.push('/properties?sort=status&order=asc')}
           />
         </Grid>
@@ -201,7 +201,7 @@ export default function DashboardPage() {
             title="Unacknowledged Alerts"
             value={propertiesAtRisk}
             subtitle="Active alerts requiring staff review"
-            color="#ef4444"
+            color="#AA222A"
             onClick={() => router.push('/alerts')}
           />
         </Grid>

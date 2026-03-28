@@ -353,7 +353,7 @@ function PropertiesListInner() {
                 <TableCell>
                   <Link
                     href={`/properties/${p.id}`}
-                    style={{ textDecoration: 'none', color: '#1e40af', fontWeight: 600 }}
+                    style={{ textDecoration: 'none', color: '#15457B', fontWeight: 600 }}
                   >
                     {p.name}
                   </Link>

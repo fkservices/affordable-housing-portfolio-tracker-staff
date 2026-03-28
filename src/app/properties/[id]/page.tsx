@@ -63,8 +63,8 @@ function getRiskFlags(propertyId: string): RiskFlag[] {
 // Severity colour mapping for risk chips
 // ---------------------------------------------------------------------------
 const SEVERITY_BG: Record<Severity, string> = {
-  red: '#ef4444',
-  amber: '#f59e0b',
+  red: '#AA222A',
+  amber: '#F5821E',
 };
 
 // ---------------------------------------------------------------------------
@@ -332,7 +332,7 @@ export default function PropertyDetailPage() {
                           align="right"
                           sx={{
                             fontWeight: 600,
-                            color: isOver ? '#ef4444' : '#22c55e',
+                            color: isOver ? '#AA222A' : '#22c55e',
                           }}
                         >
                           {isOver ? '+' : ''}

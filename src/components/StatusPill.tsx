@@ -12,17 +12,17 @@ interface StatusPillProps {
 
 const STATUS_COLOR_MAP: Record<PropertyStatus, string> = {
   active: '#22c55e',
-  'expiring-soon': '#f59e0b',
-  'under-review': '#f59e0b',
-  'non-compliant': '#ef4444',
-  expired: '#9ca3af',
+  'expiring-soon': '#F5821E',
+  'under-review': '#F5821E',
+  'non-compliant': '#AA222A',
+  expired: '#8D8D8D',
 };
 
 const SEVERITY_COLOR_MAP: Record<SeverityColor, string> = {
   green: '#22c55e',
-  amber: '#f59e0b',
-  red: '#ef4444',
-  grey: '#9ca3af',
+  amber: '#F5821E',
+  red: '#AA222A',
+  grey: '#8D8D8D',
 };
 
 function toTitleCase(str: string): string {

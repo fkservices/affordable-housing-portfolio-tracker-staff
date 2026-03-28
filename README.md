@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Affordable Housing Portfolio Tracker (AHPT) - Staff Dashboard
+
+A compliance monitoring dashboard for the City of Richmond's Affordable Housing Performance Grant (AHPG) program. Built for HCD staff to track property compliance, affordability deadlines, and risk indicators across the portfolio.
+
+## Features
+
+- **Dashboard** - KPI cards, bubble chart by status, alerts feed, upcoming affordability deadlines
+- **Properties** - Filterable, sortable table of all properties with status indicators and drill-down to detail views
+- **Property Detail** - Full compliance view with milestone tracker, HUD FMR rent comparison, compliance history timeline, staff notes, and risk flags
+- **Alerts** - Priority-sorted alert feed with acknowledge/dismiss workflow
+- **HUD Reference** - FMR lookup table with AMI-adjusted rent limits for the Richmond MSA
+- **Developers** - Developer directory with property counts and compliance rates
+- **CSV Export** - Export data from any screen
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Framework | Next.js 16 (App Router) |
+| UI | React 19, Material UI 7 |
+| Data | Firebase Firestore |
+| Hosting | Firebase App Hosting |
+| APIs | HUD FMR API, Legistar API |
+| Charts | Recharts, custom SVG |
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- Firebase project with Firestore enabled
+
+### Installation
+
+```bash
+npm install
+```
+
+### Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+NEXT_PUBLIC_HUD_API_TOKEN=<your-hud-api-token>
+NEXT_PUBLIC_FIREBASE_API_KEY=<your-firebase-api-key>
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=<your-project>.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=<your-project-id>
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=<your-project>.firebasestorage.app
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=<your-sender-id>
+NEXT_PUBLIC_FIREBASE_APP_ID=<your-app-id>
+```
+
+Register for a free HUD API token at [huduser.gov](https://www.huduser.gov/hudapi/public/register).
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/                  # Next.js App Router pages
+    dashboard/          # Dashboard with KPIs and charts
+    properties/         # Properties list and [id] detail
+    alerts/             # Alerts feed
+    hud-reference/      # HUD FMR reference table
+    developers/         # Developer directory
+    api/hud-fmr/        # HUD API proxy route
+  components/           # Reusable React components
+  lib/                  # Firebase config, data service, risk engine, API clients
+  data/                 # Seed data JSON files
+  utils/                # CSV export, formatters, provenance helpers
+scripts/
+  seed.ts               # Firestore seeding script
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Risk Engine
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The risk engine evaluates each property against 8 compliance rules:
 
-## Deploy on Vercel
+| Rule | Amber | Red |
+|------|-------|-----|
+| Affordability Expiration | < 36 months | < 12 months |
+| Rent Drift | > 95% of FMR ceiling | > 100% of FMR ceiling |
+| Income Non-Compliance | - | Any unit failing |
+| Milestone Delay | > 30 days overdue | > 90 days overdue |
+| Reporting Gap | > 30 days late | > 60 days late |
+| Tax Delinquency | - | Any delinquency |
+| Ownership Change | Any change | - |
+| Documentation Gap | < 80% complete | < 60% complete |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed via Firebase App Hosting. Environment variables are managed through Google Cloud Secret Manager and mapped in `apphosting.yaml`.
+
+## Data Sources
+
+- **Tier 1 (HCD-Provided)** - Property records, rent/occupancy reports seeded from XLSX files
+- **Tier 2 (Public APIs)** - HUD Fair Market Rents (API), Legistar ordinance records (API)
+
+## Pilot Program
+
+AHPG - City of Richmond, VA
+
+## License
+
+Private - FK Services
