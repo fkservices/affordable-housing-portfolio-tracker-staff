@@ -159,13 +159,11 @@ function PropertiesListInner() {
 
   const handleFilterChange = useCallback(
     (key: string, value: string) => {
-      setFilters((prev) => {
-        const next = { ...prev, [key]: value };
-        updateUrl(next, search);
-        return next;
-      });
+      const next = { ...filters, [key]: value };
+      setFilters(next);
+      updateUrl(next, search);
     },
-    [search, updateUrl],
+    [filters, search, updateUrl],
   );
 
   const handleSearch = useCallback(
