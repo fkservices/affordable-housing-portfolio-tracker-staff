@@ -1,0 +1,470 @@
+[
+  {
+    "id": "EVT-001",
+    "propertyId": "PROP-001",
+    "date": "2023-06-15",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Annual review completed. All units compliant with AMI-50 rent limits. Occupancy at 96%."
+  },
+  {
+    "id": "EVT-002",
+    "propertyId": "PROP-001",
+    "date": "2024-06-10",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Routine annual review. No findings. Tenant files in order."
+  },
+  {
+    "id": "EVT-003",
+    "propertyId": "PROP-001",
+    "date": "2025-06-12",
+    "eventType": "income-verification",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Random sample of 10 tenant files reviewed. All income certifications current and compliant."
+  },
+  {
+    "id": "EVT-004",
+    "propertyId": "PROP-002",
+    "date": "2022-08-01",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Annual review completed for covenant year 4. All affordable units rented to qualifying households."
+  },
+  {
+    "id": "EVT-005",
+    "propertyId": "PROP-002",
+    "date": "2023-08-05",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Clean annual review. Developer maintaining property well."
+  },
+  {
+    "id": "EVT-006",
+    "propertyId": "PROP-002",
+    "date": "2024-08-02",
+    "eventType": "site-inspection",
+    "outcome": "pass",
+    "reviewer": "Carlos Rivera, HCD Inspector",
+    "notes": "Physical inspection. Building in good condition. Minor landscaping recommendation noted."
+  },
+  {
+    "id": "EVT-007",
+    "propertyId": "PROP-003",
+    "date": "2023-01-20",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "First annual review post-CO. Lease-up complete. 82 of 84 affordable units occupied."
+  },
+  {
+    "id": "EVT-008",
+    "propertyId": "PROP-003",
+    "date": "2024-01-18",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Second annual review. Full occupancy. Retail spaces also leased."
+  },
+  {
+    "id": "EVT-009",
+    "propertyId": "PROP-003",
+    "date": "2024-07-10",
+    "eventType": "rent-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Rent roll reviewed against AMI-80 limits. All rents within allowable range."
+  },
+  {
+    "id": "EVT-010",
+    "propertyId": "PROP-004",
+    "date": "2022-03-15",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Annual review. Adaptive reuse project performing well. Strong demand for units."
+  },
+  {
+    "id": "EVT-011",
+    "propertyId": "PROP-004",
+    "date": "2023-03-12",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Routine review. No issues found."
+  },
+  {
+    "id": "EVT-012",
+    "propertyId": "PROP-004",
+    "date": "2024-03-18",
+    "eventType": "document-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Operating agreement and insurance documentation verified. All current."
+  },
+  {
+    "id": "EVT-013",
+    "propertyId": "PROP-005",
+    "date": "2022-11-05",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Carlos Rivera, HCD Inspector",
+    "notes": "Annual review and site visit. Property well maintained. Community garden active."
+  },
+  {
+    "id": "EVT-014",
+    "propertyId": "PROP-005",
+    "date": "2023-11-08",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Clean review. Occupancy at 98%."
+  },
+  {
+    "id": "EVT-015",
+    "propertyId": "PROP-005",
+    "date": "2024-11-04",
+    "eventType": "income-verification",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Sampled 15 tenant files. All income certifications valid and within AMI-50 thresholds."
+  },
+  {
+    "id": "EVT-016",
+    "propertyId": "PROP-006",
+    "date": "2024-02-10",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "First annual review. Lease-up completed ahead of schedule. All units compliant."
+  },
+  {
+    "id": "EVT-017",
+    "propertyId": "PROP-006",
+    "date": "2024-08-15",
+    "eventType": "site-inspection",
+    "outcome": "pass",
+    "reviewer": "Carlos Rivera, HCD Inspector",
+    "notes": "New construction in excellent condition. ADA units verified accessible."
+  },
+  {
+    "id": "EVT-018",
+    "propertyId": "PROP-006",
+    "date": "2025-02-12",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Second annual review. No findings. Developer responsive and communicative."
+  },
+  {
+    "id": "EVT-019",
+    "propertyId": "PROP-007",
+    "date": "2022-09-05",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Annual review for senior community. All residents meet AMI-30 income requirements."
+  },
+  {
+    "id": "EVT-020",
+    "propertyId": "PROP-007",
+    "date": "2023-09-08",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Routine review. Senior services coordinator position filled. Residents satisfied."
+  },
+  {
+    "id": "EVT-021",
+    "propertyId": "PROP-007",
+    "date": "2024-09-03",
+    "eventType": "tax-status",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Tax-exempt status verified. Property tax records current with City of Richmond."
+  },
+  {
+    "id": "EVT-022",
+    "propertyId": "PROP-008",
+    "date": "2022-05-10",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Supportive housing annual review. Case management services operational. 28 of 30 units occupied."
+  },
+  {
+    "id": "EVT-023",
+    "propertyId": "PROP-008",
+    "date": "2023-05-12",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Full occupancy. Services partner (Daily Planet Health Services) contract renewed."
+  },
+  {
+    "id": "EVT-024",
+    "propertyId": "PROP-008",
+    "date": "2024-05-08",
+    "eventType": "site-inspection",
+    "outcome": "pass",
+    "reviewer": "Carlos Rivera, HCD Inspector",
+    "notes": "Building in good condition. Common areas clean and well-maintained. Security system operational."
+  },
+  {
+    "id": "EVT-025",
+    "propertyId": "PROP-009",
+    "date": "2024-10-15",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Initial annual review post-CO. All 20 affordable townhome units leased to qualifying households."
+  },
+  {
+    "id": "EVT-026",
+    "propertyId": "PROP-009",
+    "date": "2025-04-20",
+    "eventType": "income-verification",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Full income verification of all 20 affordable units. All compliant."
+  },
+  {
+    "id": "EVT-027",
+    "propertyId": "PROP-009",
+    "date": "2025-10-18",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Second annual review. No issues. Waiting list maintained for units."
+  },
+  {
+    "id": "EVT-028",
+    "propertyId": "PROP-010",
+    "date": "2025-12-01",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "First annual review. Lease-up 90% complete. Initial tenant files reviewed."
+  },
+  {
+    "id": "EVT-029",
+    "propertyId": "PROP-010",
+    "date": "2025-12-15",
+    "eventType": "site-inspection",
+    "outcome": "pass",
+    "reviewer": "Carlos Rivera, HCD Inspector",
+    "notes": "New construction in excellent condition. All amenities as specified in covenant."
+  },
+  {
+    "id": "EVT-030",
+    "propertyId": "PROP-010",
+    "date": "2026-03-01",
+    "eventType": "document-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Operating agreement, insurance certificates, and property management contract verified."
+  },
+  {
+    "id": "EVT-031",
+    "propertyId": "PROP-011",
+    "date": "2023-01-20",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Annual review. Large preservation project operating smoothly. Occupancy at 95%."
+  },
+  {
+    "id": "EVT-032",
+    "propertyId": "PROP-011",
+    "date": "2024-01-18",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Annual review. Affordability covenant expiration approaching. Flagged for renewal outreach."
+  },
+  {
+    "id": "EVT-033",
+    "propertyId": "PROP-011",
+    "date": "2025-01-22",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Annual review pass. Covenant renewal discussions initiated with developer. Expiration Jan 2028."
+  },
+  {
+    "id": "EVT-034",
+    "propertyId": "PROP-012",
+    "date": "2022-04-10",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Routine annual review. Property in good standing."
+  },
+  {
+    "id": "EVT-035",
+    "propertyId": "PROP-012",
+    "date": "2023-04-08",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Annual review. No compliance issues."
+  },
+  {
+    "id": "EVT-036",
+    "propertyId": "PROP-012",
+    "date": "2024-04-12",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Annual review completed. Affordability period expiring April 2029. Added to watch list."
+  },
+  {
+    "id": "EVT-037",
+    "propertyId": "PROP-013",
+    "date": "2022-10-05",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Annual review. Mixed-use property compliant. Retail contributing to property financial stability."
+  },
+  {
+    "id": "EVT-038",
+    "propertyId": "PROP-013",
+    "date": "2023-10-10",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Annual review. No issues. Affordability period noted as expiring Oct 2028."
+  },
+  {
+    "id": "EVT-039",
+    "propertyId": "PROP-013",
+    "date": "2024-10-08",
+    "eventType": "rent-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Rent roll reviewed. All rents within AMI-60 limits. Developer has not responded to covenant renewal inquiry."
+  },
+  {
+    "id": "EVT-040",
+    "propertyId": "PROP-014",
+    "date": "2023-07-10",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "First annual review. Property in initial compliance. All systems operational."
+  },
+  {
+    "id": "EVT-041",
+    "propertyId": "PROP-014",
+    "date": "2024-07-08",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Second annual review. Minor maintenance items noted but overall compliant."
+  },
+  {
+    "id": "EVT-042",
+    "propertyId": "PROP-014",
+    "date": "2025-07-15",
+    "eventType": "income-verification",
+    "outcome": "fail",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "FAILURE: Income verification of 20 tenant files found 4 households (units 2B-104, 2B-207, 3B-301, 3B-305) with incomes exceeding AMI-50 threshold at recertification. Developer failed to properly recertify and adjust rents."
+  },
+  {
+    "id": "EVT-043",
+    "propertyId": "PROP-014",
+    "date": "2025-09-01",
+    "eventType": "rent-review",
+    "outcome": "fail",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "FAILURE: Rent roll audit found 2BR units at $620/mo and 3BR units at $810/mo, exceeding AMI-50 limits of $540 and $708 respectively. Corrective action plan demanded."
+  },
+  {
+    "id": "EVT-044",
+    "propertyId": "PROP-014",
+    "date": "2025-11-15",
+    "eventType": "tax-status",
+    "outcome": "fail",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "FAILURE: City of Richmond tax records show property tax delinquency of $47,832 for tax year 2025. Developer notified. 60-day cure period initiated."
+  },
+  {
+    "id": "EVT-045",
+    "propertyId": "PROP-015",
+    "date": "2024-09-10",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "First annual review. Supportive housing services in place. VA partnership active."
+  },
+  {
+    "id": "EVT-046",
+    "propertyId": "PROP-015",
+    "date": "2025-09-08",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Annual review pass on services and occupancy. However, ownership documentation review still pending."
+  },
+  {
+    "id": "EVT-047",
+    "propertyId": "PROP-015",
+    "date": "2026-01-15",
+    "eventType": "ownership-change",
+    "outcome": "pending",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Ownership transfer from original LLC to new entity filed. Awaiting updated operating agreement and confirmation of covenant assignment."
+  },
+  {
+    "id": "EVT-048",
+    "propertyId": "PROP-015",
+    "date": "2026-03-01",
+    "eventType": "document-review",
+    "outcome": "in-progress",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Reviewing submitted ownership transfer documents. Legal review of covenant assignment language underway."
+  },
+  {
+    "id": "EVT-049",
+    "propertyId": "PROP-016",
+    "date": "2022-03-10",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Annual review. Preservation property in compliance."
+  },
+  {
+    "id": "EVT-050",
+    "propertyId": "PROP-016",
+    "date": "2023-03-08",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Marcus Thompson, HCD Staff",
+    "notes": "Annual review. Covenant expiration March 2026 approaching. Developer notified of expiration timeline."
+  },
+  {
+    "id": "EVT-051",
+    "propertyId": "PROP-016",
+    "date": "2024-03-12",
+    "eventType": "annual-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Final annual review before covenant expiration. Developer has indicated intent to convert to market rate. HCD assessing displacement mitigation options."
+  },
+  {
+    "id": "EVT-052",
+    "propertyId": "PROP-016",
+    "date": "2026-03-01",
+    "eventType": "document-review",
+    "outcome": "pass",
+    "reviewer": "Jane Smith, HCD Staff",
+    "notes": "Affordability covenant formally expired. Final compliance documentation archived. Resident transition monitoring initiated."
+  }
+]

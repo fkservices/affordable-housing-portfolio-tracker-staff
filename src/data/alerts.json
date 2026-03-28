@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ALT-001",
+    "propertyId": "PROP-014",
+    "propertyName": "Southside Gateway",
+    "type": "income-non-compliance",
+    "severity": "red",
+    "message": "Income verification failure: 4 households in units 2B-104, 2B-207, 3B-301, and 3B-305 have incomes exceeding the AMI-50 threshold. Developer failed to recertify and adjust rents at annual recertification.",
+    "createdDate": "2025-07-15",
+    "acknowledged": false,
+    "acknowledgedBy": null,
+    "acknowledgedDate": null,
+    "note": null
+  },
+  {
+    "id": "ALT-002",
+    "propertyId": "PROP-014",
+    "propertyName": "Southside Gateway",
+    "type": "tax-delinquency",
+    "severity": "red",
+    "message": "Property tax delinquency of $47,832 for tax year 2025. 60-day cure period expires January 14, 2026. Failure to cure may trigger covenant default provisions.",
+    "createdDate": "2025-11-15",
+    "acknowledged": true,
+    "acknowledgedBy": "Jane Smith, HCD Staff",
+    "acknowledgedDate": "2025-11-16",
+    "note": "Developer contacted. Claims payment processing delay with lender escrow. Monitoring."
+  },
+  {
+    "id": "ALT-003",
+    "propertyId": "PROP-014",
+    "propertyName": "Southside Gateway",
+    "type": "rent-drift",
+    "severity": "red",
+    "message": "Committed rents exceed AMI-50 limits: 2BR units at $620/mo (limit $540), 3BR units at $810/mo (limit $708). Rent reduction and tenant reimbursement required per covenant Section 4.2.",
+    "createdDate": "2025-09-01",
+    "acknowledged": false,
+    "acknowledgedBy": null,
+    "acknowledgedDate": null,
+    "note": null
+  },
+  {
+    "id": "ALT-004",
+    "propertyId": "PROP-011",
+    "propertyName": "Swansboro Place",
+    "type": "expiration",
+    "severity": "amber",
+    "message": "Affordability period expires January 15, 2028 (22 months remaining). 130 affordable units at risk. Developer renewal discussions initiated but no commitment received.",
+    "createdDate": "2026-03-15",
+    "acknowledged": false,
+    "acknowledgedBy": null,
+    "acknowledgedDate": null,
+    "note": null
+  },
+  {
+    "id": "ALT-005",
+    "propertyId": "PROP-015",
+    "propertyName": "Northside Veterans Housing",
+    "type": "documentation-gap",
+    "severity": "amber",
+    "message": "Ownership transfer documentation overdue. Updated operating agreement and covenant assignment confirmation were due February 15, 2026. Now 41 days past deadline.",
+    "createdDate": "2026-03-28",
+    "acknowledged": false,
+    "acknowledgedBy": null,
+    "acknowledgedDate": null,
+    "note": null
+  }
+]

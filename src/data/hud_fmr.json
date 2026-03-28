@@ -1,0 +1,12 @@
+{
+  "year": 2024,
+  "msa": "Richmond, VA HUD Metro FMR Area",
+  "medianIncome": 110300,
+  "limits": {
+    "0BR": { "fmr": 1031, "ami30": 258, "ami50": 430, "ami60": 516, "ami80": 688 },
+    "1BR": { "fmr": 1102, "ami30": 276, "ami50": 460, "ami60": 552, "ami80": 735 },
+    "2BR": { "fmr": 1297, "ami30": 324, "ami50": 540, "ami60": 649, "ami80": 865 },
+    "3BR": { "fmr": 1699, "ami30": 425, "ami50": 708, "ami60": 850, "ami80": 1133 },
+    "4BR": { "fmr": 1863, "ami30": 466, "ami50": 776, "ami60": 932, "ami80": 1242 }
+  }
+}

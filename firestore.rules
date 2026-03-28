@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // MVP: Open read/write access (no auth required)
+    // Phase 2: Tighten to authenticated role-based access
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "DEV-001",
+    "name": "Green Horizon Developers",
+    "contactInfo": {
+      "email": "info@greenhorizon.dev",
+      "phone": "(804) 555-0101",
+      "address": "100 E Main St, Suite 400, Richmond, VA 23219"
+    }
+  },
+  {
+    "id": "DEV-002",
+    "name": "Commonwealth Housing Partners",
+    "contactInfo": {
+      "email": "contact@commonwealthhousing.com",
+      "phone": "(804) 555-0202",
+      "address": "901 E Byrd St, Suite 1200, Richmond, VA 23219"
+    }
+  },
+  {
+    "id": "DEV-003",
+    "name": "River City Development Group",
+    "contactInfo": {
+      "email": "hello@rivercitydg.com",
+      "phone": "(804) 555-0303",
+      "address": "2401 W Main St, Suite 200, Richmond, VA 23220"
+    }
+  },
+  {
+    "id": "DEV-004",
+    "name": "Southside Community Builders",
+    "contactInfo": {
+      "email": "admin@southsidecb.org",
+      "phone": "(804) 555-0404",
+      "address": "3000 Midlothian Tnpk, Suite 105, Richmond, VA 23224"
+    }
+  },
+  {
+    "id": "DEV-005",
+    "name": "Capital Region Affordable Housing",
+    "contactInfo": {
+      "email": "info@capitalregionah.org",
+      "phone": "(804) 555-0505",
+      "address": "700 E Franklin St, Suite 300, Richmond, VA 23219"
+    }
+  },
+  {
+    "id": "DEV-006",
+    "name": "Maggie Walker Community Land Trust",
+    "contactInfo": {
+      "email": "info@maggiewalkerclt.org",
+      "phone": "(804) 555-0606",
+      "address": "200 W Broad St, Richmond, VA 23220"
+    }
+  }
+]
