@@ -96,12 +96,22 @@ const FILTER_DEFS = [
 // ---------------------------------------------------------------------------
 type SortDir = 'asc' | 'desc';
 
+const STATUS_SORT_ORDER: Record<string, number> = {
+  'non-compliant': 0,
+  'expiring-soon': 1,
+  'under-review': 2,
+  active: 3,
+  expired: 4,
+};
+
 function sortRows(rows: Property[], key: string, dir: SortDir): Property[] {
   return [...rows].sort((a, b) => {
     const aVal = (a as unknown as Record<string, unknown>)[key];
     const bVal = (b as unknown as Record<string, unknown>)[key];
     let cmp = 0;
-    if (typeof aVal === 'number' && typeof bVal === 'number') {
+    if (key === 'status') {
+      cmp = (STATUS_SORT_ORDER[String(aVal)] ?? 99) - (STATUS_SORT_ORDER[String(bVal)] ?? 99);
+    } else if (typeof aVal === 'number' && typeof bVal === 'number') {
       cmp = aVal - bVal;
     } else {
       cmp = String(aVal ?? '').localeCompare(String(bVal ?? ''));
@@ -130,8 +140,8 @@ function PropertiesListInner() {
   });
 
   const [search, setSearch] = useState<string>(searchParams.get('q') ?? '');
-  const [sortKey, setSortKey] = useState<string>('name');
-  const [sortDir, setSortDir] = useState<SortDir>('asc');
+  const [sortKey, setSortKey] = useState<string>(searchParams.get('sort') ?? 'name');
+  const [sortDir, setSortDir] = useState<SortDir>((searchParams.get('order') as SortDir) ?? 'asc');
 
   // Update URL when filters change
   const updateUrl = useCallback(

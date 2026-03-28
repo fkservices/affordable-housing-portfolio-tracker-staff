@@ -15,69 +15,93 @@ interface DonutChartProps {
   onSegmentClick?: (label: string) => void;
 }
 
-export default function DonutChart({ data, size = 200, onSegmentClick }: DonutChartProps) {
+function formatLabel(label: string): string {
+  return label
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
+export default function DonutChart({ data, size = 280, onSegmentClick }: DonutChartProps) {
   const total = data.reduce((sum, d) => sum + d.value, 0);
   if (total === 0) return null;
 
-  const radius = 70;
-  const strokeWidth = 30;
-  const circumference = 2 * Math.PI * radius;
-  const center = size / 2;
+  const maxValue = Math.max(...data.map((d) => d.value));
+  const minRadius = size * 0.1;
+  const maxRadius = size * 0.19;
 
-  // Build segments with cumulative offsets
-  let accumulated = 0;
-  const segments = data.map((segment) => {
-    const fraction = segment.value / total;
-    const dashLength = fraction * circumference;
-    const dashGap = circumference - dashLength;
-    const offset = -accumulated * circumference + circumference * 0.25; // rotate -90deg start
-    accumulated += fraction;
-    return { ...segment, dashLength, dashGap, offset };
+  // Pack bubbles in a simple layout
+  const cx = size / 2;
+  const cy = size / 2;
+  const angleStep = (2 * Math.PI) / data.length;
+
+  const bubbles = data.map((seg, i) => {
+    const fraction = seg.value / maxValue;
+    const r = minRadius + fraction * (maxRadius - minRadius);
+    const orbitRadius = data.length === 1 ? 0 : size / 2 - maxRadius - 8;
+    const angle = angleStep * i - Math.PI / 2;
+    const x = cx + orbitRadius * Math.cos(angle);
+    const y = cy + orbitRadius * Math.sin(angle);
+    return { ...seg, r, x, y };
   });
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
       <Box sx={{ position: 'relative', width: size, height: size }}>
         <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-          {segments.map((seg) => (
-            <circle
-              key={seg.label}
-              cx={center}
-              cy={center}
-              r={radius}
-              fill="none"
-              stroke={seg.color}
-              strokeWidth={strokeWidth}
-              strokeDasharray={`${seg.dashLength} ${seg.dashGap}`}
-              strokeDashoffset={seg.offset}
+          {bubbles.map((b) => (
+            <g
+              key={b.label}
               style={{ cursor: onSegmentClick ? 'pointer' : 'default' }}
-              onClick={() => onSegmentClick?.(seg.label)}
-            />
+              onClick={() => onSegmentClick?.(b.label)}
+            >
+              <circle
+                cx={b.x}
+                cy={b.y}
+                r={b.r}
+                fill={b.color}
+                opacity={0.85}
+              />
+              <text
+                x={b.x}
+                y={b.y - b.r * 0.12}
+                textAnchor="middle"
+                dominantBaseline="central"
+                fill="white"
+                fontWeight="700"
+                fontSize={b.r * 0.45}
+              >
+                {b.value}
+              </text>
+              <text
+                x={b.x}
+                y={b.y + b.r * 0.3}
+                textAnchor="middle"
+                dominantBaseline="central"
+                fill="white"
+                fontWeight="500"
+                fontSize={b.r * 0.22}
+              >
+                {formatLabel(b.label)}
+              </text>
+            </g>
           ))}
         </svg>
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            pointerEvents: 'none',
-          }}
-        >
-          <Typography variant="h5" sx={{ fontWeight: 700 }}>
-            {total}
-          </Typography>
-        </Box>
       </Box>
 
       {/* Legend */}
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'center' }}>
         {data.map((seg) => (
-          <Box key={seg.label} sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+          <Box
+            key={seg.label}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 0.5,
+              cursor: onSegmentClick ? 'pointer' : 'default',
+            }}
+            onClick={() => onSegmentClick?.(seg.label)}
+          >
             <Box
               sx={{
                 width: 10,
@@ -88,7 +112,7 @@ export default function DonutChart({ data, size = 200, onSegmentClick }: DonutCh
               }}
             />
             <Typography variant="caption">
-              {seg.label} ({seg.value})
+              {formatLabel(seg.label)} ({seg.value})
             </Typography>
           </Box>
         ))}

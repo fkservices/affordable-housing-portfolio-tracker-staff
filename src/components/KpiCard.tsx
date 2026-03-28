@@ -14,6 +14,7 @@ interface KpiCardProps {
   subtitle?: string;
   trend?: 'up' | 'down' | 'neutral';
   color?: string;
+  onClick?: () => void;
 }
 
 const trendIcon: Record<string, React.ReactNode> = {
@@ -22,13 +23,15 @@ const trendIcon: Record<string, React.ReactNode> = {
   neutral: <TrendingFlatIcon sx={{ color: '#9ca3af' }} />,
 };
 
-export default function KpiCard({ title, value, subtitle, trend, color }: KpiCardProps) {
+export default function KpiCard({ title, value, subtitle, trend, color, onClick }: KpiCardProps) {
   return (
     <Card
       sx={{
         borderLeft: color ? `4px solid ${color}` : undefined,
         height: '100%',
+        ...(onClick && { cursor: 'pointer', '&:hover': { boxShadow: 4 } }),
       }}
+      onClick={onClick}
     >
       <CardContent>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>

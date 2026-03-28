@@ -174,13 +174,16 @@ export default function DashboardPage() {
           <KpiCard
             title="Total Properties"
             value={totalProperties}
+            subtitle="All AHPG properties in the portfolio"
             color="#1e40af"
+            onClick={() => router.push('/properties')}
           />
         </Grid>
         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <KpiCard
             title="Active Affordable Units"
             value={activeAffordableUnits}
+            subtitle="Units under active affordability agreements"
             color="#22c55e"
           />
         </Grid>
@@ -188,14 +191,18 @@ export default function DashboardPage() {
           <KpiCard
             title="Portfolio Compliance Rate"
             value={complianceRate}
+            subtitle="Properties meeting all compliance requirements"
             color="#7c3aed"
+            onClick={() => router.push('/properties?sort=status&order=asc')}
           />
         </Grid>
         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <KpiCard
             title="Unacknowledged Alerts"
             value={propertiesAtRisk}
+            subtitle="Active alerts requiring staff review"
             color="#ef4444"
+            onClick={() => router.push('/alerts')}
           />
         </Grid>
       </Grid>
@@ -214,7 +221,7 @@ export default function DashboardPage() {
               </Typography>
               <DonutChart
                 data={statusCounts}
-                size={220}
+                size={400}
                 onSegmentClick={handleSegmentClick}
               />
             </CardContent>

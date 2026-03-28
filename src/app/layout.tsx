@@ -43,7 +43,7 @@ export default function RootLayout({
               component="main"
               sx={{
                 flexGrow: 1,
-                ml: { xs: 0, md: `${DRAWER_WIDTH}px` },
+                ml: 0,
                 minHeight: '100vh',
                 backgroundColor: '#f8fafc',
               }}

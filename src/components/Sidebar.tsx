@@ -20,6 +20,7 @@ import WarningIcon from '@mui/icons-material/Warning';
 import TableChartIcon from '@mui/icons-material/TableChart';
 import PeopleIcon from '@mui/icons-material/People';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 
 export const DRAWER_WIDTH = 260;
@@ -104,7 +105,16 @@ export default function Sidebar({ alertCount = 0 }: SidebarProps) {
       <>
         <IconButton
           onClick={() => setMobileOpen(true)}
-          sx={{ position: 'fixed', top: 8, left: 8, zIndex: 1300 }}
+          aria-label="Open menu"
+          sx={{
+            position: 'fixed',
+            top: 6,
+            left: 12,
+            zIndex: 1500,
+            backgroundColor: 'white',
+            boxShadow: 2,
+            '&:hover': { backgroundColor: '#f5f5f5' },
+          }}
         >
           <MenuIcon />
         </IconButton>
@@ -117,6 +127,11 @@ export default function Sidebar({ alertCount = 0 }: SidebarProps) {
             '& .MuiDrawer-paper': { width: DRAWER_WIDTH, boxSizing: 'border-box' },
           }}
         >
+          <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
+            <IconButton onClick={() => setMobileOpen(false)} aria-label="Close menu">
+              <CloseIcon />
+            </IconButton>
+          </Box>
           {drawerContent}
         </Drawer>
       </>
