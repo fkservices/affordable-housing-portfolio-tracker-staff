@@ -146,7 +146,7 @@ export default function DevelopersPage() {
                   <MuiLink
                     component="button"
                     variant="body2"
-                    onClick={() => router.push(`/properties?developer=${row.id}`)}
+                    onClick={() => router.push(`/properties?developer=${encodeURIComponent(row.name)}`)}
                     sx={{ cursor: 'pointer', textAlign: 'left' }}
                   >
                     {row.name}
